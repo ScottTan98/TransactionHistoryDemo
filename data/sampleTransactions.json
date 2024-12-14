@@ -1,0 +1,122 @@
+[
+  {
+    "amount": -150.75,
+    "date": "2024-12-01",
+    "description": "Groceries",
+    "type": "debit"
+  },
+  {
+    "amount": -50.00,
+    "date": "2024-12-02",
+    "description": "Restaurant",
+    "type": "debit"
+  },
+  {
+    "amount": 2000.00,
+    "date": "2024-12-03",
+    "description": "Salary",
+    "type": "credit"
+  },
+  {
+    "amount": -100.00,
+    "date": "2024-12-05",
+    "description": "Electric Bill",
+    "type": "debit"
+  },
+  {
+    "amount": 50.00,
+    "date": "2024-12-06",
+    "description": "Cashback",
+    "type": "credit"
+  },
+  {
+    "amount": -30.00,
+    "date": "2024-12-07",
+    "description": "Movie Ticket",
+    "type": "debit"
+  },
+  {
+    "amount": -15.00,
+    "date": "2024-12-08",
+    "description": "Transportation",
+    "type": "debit"
+  },
+  {
+    "amount": 120.00,
+    "date": "2024-12-09",
+    "description": "Freelance Project",
+    "type": "credit"
+  },
+  {
+    "amount": -200.00,
+    "date": "2024-12-10",
+    "description": "Rent",
+    "type": "debit"
+  },
+  {
+    "amount": 40.00,
+    "date": "2024-12-11",
+    "description": "Gift",
+    "type": "credit"
+  },
+  {
+    "amount": -25.00,
+    "date": "2024-12-12",
+    "description": "Parking Fee",
+    "type": "debit"
+  },
+  {
+    "amount": -75.00,
+    "date": "2024-12-13",
+    "description": "Shopping",
+    "type": "debit"
+  },
+  {
+    "amount": 300.00,
+    "date": "2024-12-14",
+    "description": "Bonus",
+    "type": "credit"
+  },
+  {
+    "amount": -45.00,
+    "date": "2024-12-15",
+    "description": "Subscription",
+    "type": "debit"
+  },
+  {
+    "amount": -250.00,
+    "date": "2024-12-16",
+    "description": "Home Repairs",
+    "type": "debit"
+  },
+  {
+    "amount": 150.00,
+    "date": "2024-12-17",
+    "description": "Gift from Friend",
+    "type": "credit"
+  },
+  {
+    "amount": -80.00,
+    "date": "2024-12-18",
+    "description": "Dining Out",
+    "type": "debit"
+  },
+  {
+    "amount": -55.00,
+    "date": "2024-12-19",
+    "description": "Fuel",
+    "type": "debit"
+  },
+  {
+    "amount": 500.00,
+    "date": "2024-12-20",
+    "description": "Project Payment",
+    "type": "credit"
+  },
+  {
+    "amount": -120.00,
+    "date": "2024-12-21",
+    "description": "Phone Bill",
+    "type": "debit"
+  }
+]
