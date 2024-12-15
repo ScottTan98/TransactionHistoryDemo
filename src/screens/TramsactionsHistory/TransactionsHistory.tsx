@@ -58,7 +58,7 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.revealButton} onPress={amountVisible ? () => setAmountVisible(false) : authenticateToReveal}>
-        <Image source={amountVisible ? require('../assets/hide.png') : require('../assets/show.png')}/>
+        <Image source={amountVisible ? require('../../assets/hide.png') : require('../../assets/show.png')}/>
       </TouchableOpacity>
       <SectionList
         sections={groupByDate(transactions)}
