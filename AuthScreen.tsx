@@ -3,7 +3,6 @@ import { View, Text, Button, Alert, StyleSheet } from 'react-native';
 import ReactNativeBiometrics from 'react-native-biometrics';
 
 const AuthScreen = ({navigation} : {navigation: any}) => {
-    console.log('navigation', navigation);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const handleBiometricAuth = async () => {
@@ -18,7 +17,6 @@ const AuthScreen = ({navigation} : {navigation: any}) => {
                     const { success } = resultObject;
 
                     if (success) {
-                        Alert.alert('Authentication Successful');
                         setIsAuthenticated(true);
                         navigation.navigate('HomeScreen');
                     } else {

@@ -16,8 +16,10 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import AuthScreen from './AuthScreen';
 import HomeScreen from './HomeScreen';
+import TransactionDetails from './TransactionDetails';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
 
 const Stack = createStackNavigator();
 
@@ -44,7 +46,12 @@ function App(): React.JSX.Element {
         <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
-          options={{headerShown: true}}
+          options={{title: 'Transaction', headerLeft: () => null}}
+        />
+        <Stack.Screen
+          name="TransactionDetails"
+          component={TransactionDetails}
+          options={{title: 'Transaction Details', headerBackTitle: ''}}
         />
       </Stack.Navigator>
     </NavigationContainer>
