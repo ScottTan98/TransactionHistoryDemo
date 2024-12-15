@@ -4,6 +4,7 @@ export interface Transaction {
   date: string;
   description: string;
   type: string;
+  currency: string;
 }
 
 export type RootStackParamList = {

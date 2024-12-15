@@ -10,42 +10,34 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: '#ccc',
     borderWidth: 1,
-    borderRadius: 5,
-    paddingLeft: 8,
+    borderRadius: 20,
+    paddingLeft: 10,
+    paddingRight: 260,
     marginBottom: 16,
   },
-  transactionItem: {
-    padding: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+  searchBarView: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  description: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  date: {
-    fontSize: 12,
-    color: 'gray',
-  },
-  amount: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#28a745',
+    borderBottomWidth: 1,
+    marginBottom: 20,
+    borderBottomColor: '#ccc',
   },
   revealButton: {
-    padding: 12,
+    padding: 6,
     borderRadius: 8,
     marginBottom: 16,
     alignSelf: 'flex-end',
   },
   sectionHeader: {
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 15,
     paddingVertical: 10,
-    backgroundColor: '#eee',
+    borderBottomWidth: 1,
+    borderColor: '#ccc',
+  },
+  iconImage: {
+    width: 30,
+    height: 30,
+    resizeMode: 'contain',
   },
 });
 

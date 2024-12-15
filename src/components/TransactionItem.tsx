@@ -10,20 +10,23 @@ interface TransactionItemProps {
 const TransactionItem: React.FC<TransactionItemProps> = ({ transaction, amountVisible, onPress }) => {
   return (
     <TouchableOpacity style={styles.transactionItem} onPress={onPress}>
-      <Text>{transaction.description}</Text>
-      <Text>{amountVisible ? `${transaction.amount > 0 ? '+' : ''}${transaction.amount.toFixed(2)}` : '****'}</Text>
+      <Text style={styles.textFont}>{transaction.description}</Text>
+      <Text style={styles.textFont}>{amountVisible ? `${transaction.amount > 0 ? '+' : ''}${transaction.amount.toFixed(2)}` : '****'}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   transactionItem: {
-    padding: 12,
-    borderBottomWidth: 1,
+    padding: 20,
     borderBottomColor: '#ccc',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  textFont: {
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 

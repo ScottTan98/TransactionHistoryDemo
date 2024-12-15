@@ -25,7 +25,7 @@ const Navigation: React.FC = () => {
         <Stack.Screen
           name="TransactionDetails"
           component={TransactionDetails}
-          options={{ title: 'Transaction Details', headerBackTitle: '' }}
+          options={{ title: '', headerBackTitle: '' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

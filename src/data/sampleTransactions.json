@@ -2,6 +2,7 @@
   {
     "id": 1,
     "amount": -150.75,
+    "currency": "MYR",
     "date": "2024-12-01",
     "description": "Groceries",
     "type": "debit"
@@ -9,6 +10,7 @@
   {
     "id": 2,
     "amount": -50.00,
+    "currency": "MYR",
     "date": "2024-12-01",
     "description": "Restaurant",
     "type": "debit"
@@ -16,6 +18,7 @@
   {
     "id": 3,
     "amount": 2000.00,
+    "currency": "MYR",
     "date": "2024-12-01",
     "description": "Salary",
     "type": "credit"
@@ -23,6 +26,7 @@
   {
     "id": 4,
     "amount": -100.00,
+    "currency": "MYR",
     "date": "2024-12-01",
     "description": "Electric Bill",
     "type": "debit"
@@ -30,6 +34,7 @@
   {
     "id": 5,
     "amount": 50.00,
+    "currency": "MYR",
     "date": "2024-12-02",
     "description": "Cashback",
     "type": "credit"
@@ -37,6 +42,7 @@
   {
     "id": 6,
     "amount": -30.00,
+    "currency": "MYR",
     "date": "2024-12-02",
     "description": "Movie Ticket",
     "type": "debit"
@@ -44,6 +50,7 @@
   {
     "id": 7,
     "amount": -15.00,
+    "currency": "MYR",
     "date": "2024-12-02",
     "description": "Transportation",
     "type": "debit"
@@ -51,6 +58,7 @@
   {
     "id": 8,
     "amount": 120.00,
+    "currency": "MYR",
     "date": "2024-12-02",
     "description": "Freelance Project",
     "type": "credit"
@@ -58,27 +66,31 @@
   {
     "id": 9,
     "amount": -200.00,
-    "date": "2024-12-3",
+    "currency": "MYR",
+    "date": "2024-12-03",
     "description": "Rent",
     "type": "debit"
   },
   {
     "id": 10,
     "amount": 40.00,
-    "date": "2024-12-3",
+    "currency": "MYR",
+    "date": "2024-12-03",
     "description": "Gift",
     "type": "credit"
   },
   {
     "id": 11,
     "amount": -25.00,
-    "date": "2024-12-3",
+    "currency": "MYR",
+    "date": "2024-12-03",
     "description": "Parking Fee",
     "type": "debit"
   },
   {
     "id": 12,
     "amount": -75.00,
+    "currency": "MYR",
     "date": "2024-12-13",
     "description": "Shopping",
     "type": "debit"
@@ -86,6 +98,7 @@
   {
     "id": 13,
     "amount": 300.00,
+    "currency": "MYR",
     "date": "2024-12-14",
     "description": "Bonus",
     "type": "credit"
@@ -93,6 +106,7 @@
   {
     "id": 14,
     "amount": -45.00,
+    "currency": "MYR",
     "date": "2024-12-15",
     "description": "Subscription",
     "type": "debit"
@@ -100,6 +114,7 @@
   {
     "id": 15,
     "amount": -250.00,
+    "currency": "MYR",
     "date": "2024-12-16",
     "description": "Home Repairs",
     "type": "debit"
@@ -107,13 +122,15 @@
   {
     "id": 16,
     "amount": 150.00,
-    "date": "2024-12-17",
+    "currency": "MYR",
+    "date": "2024-12-18",
     "description": "Gift from Friend",
     "type": "credit"
   },
   {
     "id": 17,
     "amount": -80.00,
+    "currency": "MYR",
     "date": "2024-12-18",
     "description": "Dining Out",
     "type": "debit"
@@ -121,20 +138,23 @@
   {
     "id": 18,
     "amount": -55.00,
-    "date": "2024-12-19",
+    "currency": "MYR",
+    "date": "2024-12-21",
     "description": "Fuel",
     "type": "debit"
   },
   {
     "id": 19,
     "amount": 500.00,
-    "date": "2024-12-20",
+    "currency": "MYR",
+    "date": "2024-12-21",
     "description": "Project Payment",
     "type": "credit"
   },
   {
     "id": 20,
     "amount": -120.00,
+    "currency": "MYR",
     "date": "2024-12-21",
     "description": "Phone Bill",
     "type": "debit"

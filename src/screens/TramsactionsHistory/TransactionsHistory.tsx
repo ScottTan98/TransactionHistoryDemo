@@ -36,7 +36,6 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
-
     // Simulate fetching new data
     setTimeout(() => {
       setTransactions(prev => [
@@ -65,21 +64,22 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
   }, []);
 
   useEffect(() => {
-    // Whenever the search query changes, filter the transactions
     filterTransactions(searchQuery);
   }, [filterTransactions, searchQuery]);
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.revealButton} onPress={amountVisible ? () => setAmountVisible(false) : authenticateToReveal}>
-        <Image source={amountVisible ? require('../../assets/hide.png') : require('../../assets/show.png')}/>
-      </TouchableOpacity>
-      <TextInput
-        style={styles.searchBar}
-        placeholder="Search transactions"
-        value={searchQuery}
-        onChangeText={setSearchQuery}  // Update search query on text change
-      />
+      <View style={styles.searchBarView}>
+        <TextInput
+          style={styles.searchBar}
+          placeholder="Search..."
+          value={searchQuery}
+          onChangeText={setSearchQuery}
+        />
+        <TouchableOpacity style={styles.revealButton} onPress={amountVisible ? () => setAmountVisible(false) : authenticateToReveal}>
+          <Image style={styles.iconImage} source={amountVisible ? require('../../assets/hide.png') : require('../../assets/show.png')}/>
+        </TouchableOpacity>
+      </View>
       <SectionList
         sections={groupByDate(filteredTransactions)}
         keyExtractor={(item) => item.id.toString()}
