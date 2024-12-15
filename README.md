@@ -12,10 +12,10 @@ This is a mobile application built using React Native for iOS that allows users 
 ### Screenshots
 
 #### Transaction History View
-<img src="./assets/screenshots/transactionsHistory.png" width=10% height=10%>
+<img src="./assets/screenshots/transactionsHistory.png" width=30% height=30%>
 
 #### Transaction Detail View
-<img src="./assets/screenshots/transactionDetails.png" width=10% height=10%>
+<img src="./assets/screenshots/transactionDetails.png" width=30% height=30%>
 
 ## Prerequisites
 
