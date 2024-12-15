@@ -1,80 +1,78 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Secure Transaction App
 
-# Getting Started
+This is a mobile application built using React Native for iOS that allows users to securely view and manage their transaction history. The app is designed with a focus on security and performance, ensuring that sensitive financial data is handled with utmost care.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
+- User authentication and authorization.
+- View transaction history (sample data)
+- View detailed transaction history.
+- Securely display sensitive financial data(amount).
+- Mimic Real-time data updates(pull-down refresh feature).
 
-## Step 1: Start the Metro Server
+### Screenshots
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+#### Transaction History View
+<img src="./assets/screenshots/transactionsHistory.png" width=10% height=10%>
 
-To start Metro, run the following command from the _root_ of your React Native project:
+#### Transaction Detail View
+<img src="./assets/screenshots/transactionDetails.png" width=10% height=10%>
 
-```bash
-# using npm
-npm start
+## Prerequisites
 
-# OR using Yarn
-yarn start
-```
+Before running the app, make sure you have the following installed:
 
-## Step 2: Start your Application
+- [Node.js](https://nodejs.org/en/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- [Xcode](https://developer.apple.com/xcode/) (for iOS development)
+- [Android Studio](https://developer.android.com/studio) (for Android development)
+- [JDK 17+](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### iOS Setup
+1. **Install Xcode**: Download and install **Xcode** from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
 
-### For Android
+2. **Clone the Repository**:
+   ```
+   git clone https://github.com/ScottTan98/TransactionHistoryDemo.git
+   ```
+3. **Install dependencies**: 
+   ```
+   npm install
+   ```
+4. **Run the app on an iOS simulator or connected device**: 
+   ```
+   npx react-native run-ios
+   ```
+5. **Troubleshooting iOS Build Issues**: If you encounter issues with the build process, try cleaning the project and reinstalling the dependencies:
+   ```
+   npx react-native clean
+   npm install
+   npx react-native run-ios
+   ```
 
-```bash
-# using npm
-npm run android
+### Android Setup
+1. **Install Android Studio**: Download and install Android Studio from [here](https://developer.android.com/studio).
+2. **Clone the Repository**:
+   ```
+   git clone https://github.com/ScottTan98/TransactionHistoryDemo.git
+   ```
+3. **Install dependencies**: 
+   ```
+   npm install
+   ```
+4. **Set up Android Virtual Device (AVD)**
+5. **Run the App on Android Emulator or Connected Device**: 
+   ```
+   npx react-native run-android
+   ```
+6. **Troubleshooting Android Build Issues**: If you encounter issues with the Android build, try cleaning the project and reinstalling dependencies:
+   ```
+   npx react-native clean
+   npm install
+   npx react-native run-android
+   ```
 
-# OR using Yarn
-yarn android
-```
+### License 
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### For iOS
+   
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# TransactionHistoryDemo
