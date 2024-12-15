@@ -6,7 +6,14 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#f9f9f9',
   },
-
+  searchBar: {
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingLeft: 8,
+    marginBottom: 16,
+  },
   transactionItem: {
     padding: 12,
     borderBottomWidth: 1,
