@@ -38,14 +38,19 @@ Before running the app, make sure you have the following installed:
    ```
    npm install
    ```
-4. **Run the app on an iOS simulator or connected device**: 
+4. **Install pods**: 
+   ```
+   npm run ios:pods
+   ```
+5. **Run the app on an iOS simulator or connected device**: 
    ```
    npx react-native run-ios
    ```
-5. **Troubleshooting iOS Build Issues**: If you encounter issues with the build process, try cleaning the project and reinstalling the dependencies:
+6. **Troubleshooting iOS Build Issues**: If you encounter issues with the build process, try cleaning the project and reinstalling the dependencies:
    ```
    npx react-native clean
    npm install
+   npm run ios:pods
    npx react-native run-ios
    ```
 
@@ -59,15 +64,20 @@ Before running the app, make sure you have the following installed:
    ```
    npm install
    ```
-4. **Set up Android Virtual Device (AVD)**
-5. **Run the App on Android Emulator or Connected Device**: 
+4. **Build the Android App**:
+   ```
+   npm run android:build
+   ```
+5. **Set up Android Virtual Device (AVD)**
+6. **Run the App on Android Emulator or Connected Device**: 
    ```
    npx react-native run-android
    ```
-6. **Troubleshooting Android Build Issues**: If you encounter issues with the Android build, try cleaning the project and reinstalling dependencies:
+7. **Troubleshooting Android Build Issues**: If you encounter issues with the Android build, try cleaning the project and reinstalling dependencies:
    ```
    npx react-native clean
    npm install
+   npm run android:build
    npx react-native run-android
    ```
 

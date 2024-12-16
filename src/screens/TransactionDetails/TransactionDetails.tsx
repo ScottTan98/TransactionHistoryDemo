@@ -26,8 +26,8 @@ const TransactionDetails: React.FC<TransactionDetailsProps> = ({ route }) => {
         </View>
       </View>
       <View style={styles.detailsContainer}>
-      <Text style={styles.sectionTitle}>Transaction details</Text>
-      <View style={styles.detailRow}>
+        <Text style={styles.sectionTitle}>Transaction details</Text>
+        <View style={styles.detailRow}>
           <Text style={styles.detailLabel}>Description</Text>
           <Text style={styles.detailValue}>{transaction.description}</Text>
         </View>

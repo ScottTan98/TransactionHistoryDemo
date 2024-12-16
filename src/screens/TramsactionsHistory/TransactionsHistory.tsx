@@ -27,11 +27,11 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
 
   const authenticateToReveal = async () => {
     const success = await authenticateWithBiometrics('Authenticate to view amounts');
-      if (success) {
-        setAmountVisible(true);
-      } else{
-        Alert.alert('Authentication Failed');
-      }
+    if (success) {
+      setAmountVisible(true);
+    } else{
+      Alert.alert('Authentication Failed');
+    }
   };
 
   const onRefresh = useCallback(() => {
@@ -40,7 +40,7 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
     setTimeout(() => {
       setTransactions(prev => [
         ...prev,
-        { id: 21, amount: -20.00, date: '2024-12-22', description: 'Coffee', type: 'debit' },
+        { id: 21, amount: -20.00, date: '2024-12-22', description: 'Coffee', type: 'debit', currency: 'MYR' },
       ]);
       setRefreshing(false);
     }, 2000);

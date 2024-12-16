@@ -26,11 +26,11 @@ function App(): React.JSX.Element {
 
   return (
     <>
-        <StatusBar
+      <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
-        />
-        <Navigation />
+      />
+      <Navigation />
     </>
   );
 }
