@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { Alert, View, Text, TouchableOpacity, SectionList, RefreshControl, Image, TextInput } from 'react-native';
+import { Alert, View, Text, TouchableOpacity, SectionList, RefreshControl, Image, TextInput, ActivityIndicator } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import sampleTransactions from '../../data/sampleTransactions.json';
 import { Transaction, RootStackParamList } from '../../types/types';
@@ -24,6 +24,7 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
   const [refreshing, setRefreshing] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filteredTransactions, setFilteredTransactions] = useState<Transaction[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const authenticateToReveal = async () => {
     const success = await authenticateWithBiometrics('Authenticate to view amounts');
@@ -55,12 +56,22 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
 
 
   useEffect(() => {
+    // mimic fetch from api
+    const fetchTransactions = async () => {
     try{
-      setTransactions(sampleTransactions);
-      setFilteredTransactions(sampleTransactions);
+      const response : Transaction[] = await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(sampleTransactions);
+        }, 2000); // Simulate a 2-second delay
+      });
+      setTransactions(response);
+      setFilteredTransactions(response);
+      setIsLoading(false);
     } catch (error) {
       console.error('Failed to load:', error);
     }
+  };
+  fetchTransactions();
   }, []);
 
   useEffect(() => {
@@ -68,36 +79,40 @@ const TransactionsHistory: React.FC<TransactionsHistoryProps> = ({navigation}) =
   }, [filterTransactions, searchQuery]);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.searchBarView}>
-        <TextInput
-          style={styles.searchBar}
-          placeholder="Search..."
-          value={searchQuery}
-          onChangeText={setSearchQuery}
-        />
-        <TouchableOpacity style={styles.revealButton} onPress={amountVisible ? () => setAmountVisible(false) : authenticateToReveal}>
-          <Image style={styles.iconImage} source={amountVisible ? require('../../assets/hide.png') : require('../../assets/show.png')}/>
-        </TouchableOpacity>
-      </View>
-      <SectionList
-        sections={groupByDate(filteredTransactions)}
-        keyExtractor={(item) => item.id.toString()}
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
-        renderSectionHeader={({ section: { title } }) => (
-          <Text style={styles.sectionHeader}>{title}</Text>
-        )}
-        renderItem={({item}) => (
-          <TransactionItem
-            transaction={item}
-            amountVisible={amountVisible}
-            onPress={() => navigation.navigate('TransactionDetails', { transaction: item })}
+    <>
+    {isLoading ? <ActivityIndicator/> :
+      <View style={styles.container}>
+        <View style={styles.searchBarView}>
+          <TextInput
+            style={styles.searchBar}
+            placeholder="Search..."
+            value={searchQuery}
+            onChangeText={setSearchQuery}
           />
-        )}
-      />
-    </View>
+          <TouchableOpacity style={styles.revealButton} onPress={amountVisible ? () => setAmountVisible(false) : authenticateToReveal}>
+            <Image style={styles.iconImage} source={amountVisible ? require('../../assets/hide.png') : require('../../assets/show.png')}/>
+          </TouchableOpacity>
+        </View>
+        <SectionList
+          sections={groupByDate(filteredTransactions)}
+          keyExtractor={(item) => item.id.toString()}
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }
+          renderSectionHeader={({ section: { title } }) => (
+            <Text style={styles.sectionHeader}>{title}</Text>
+          )}
+          renderItem={({item}) => (
+            <TransactionItem
+              transaction={item}
+              amountVisible={amountVisible}
+              onPress={() => navigation.navigate('TransactionDetails', { transaction: item })}
+            />
+          )}
+        />
+      </View>
+    }
+    </>
   );
 };
 

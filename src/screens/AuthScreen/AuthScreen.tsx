@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Alert} from 'react-native';
+import { View, Text, TouchableOpacity} from 'react-native';
 import { authenticateWithBiometrics } from '../../utils/biometricAuth';
 import { RootStackParamList } from '../../types/types';
 import styles from './AuthScreen.styles';
@@ -22,7 +22,7 @@ const AuthScreen: React.FC<AuthScreenProps> = ({navigation} : {navigation: any})
     if (success) {
       navigation.navigate('TransactionsHistory');
     } else {
-      Alert.alert('Authentication Failed');
+      return;
     }
   };
   return (

@@ -20,7 +20,7 @@ const Navigation: React.FC = () => {
         <Stack.Screen
           name="TransactionsHistory"
           component={TransactionsHistory}
-          options={{ title: 'Transaction', headerLeft: () => null }}
+          options={{ title: 'Transaction', headerLeft: () => null, gestureEnabled: false  }}
         />
         <Stack.Screen
           name="TransactionDetails"
